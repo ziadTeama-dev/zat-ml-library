@@ -137,18 +137,18 @@ class LogisticRegression:
 
 
 # Testing
-LogisticRegression = LogisticRegression(10 , show_logs=True)
+# LogisticRegression = LogisticRegression(10 , show_logs=True)
 
-x = np.random.randn(5,10)
-
-
-y = np.random.randint(0,2,(5,1))
-
-x1 = np.random.randn(1,10)
-y1 = np.random.randint(0,2,(1,))
+# x = np.random.randn(5,10)
 
 
+# y = np.random.randint(0,2,(5,1))
 
-LogisticRegression.fit(x,y)
-print(f"predicted : ")
-print(LogisticRegression.predict(x1))
+# x1 = np.random.randn(1,10)
+# y1 = np.random.randint(0,2,(1,))
+
+
+
+# LogisticRegression.fit(x,y)
+# print(f"predicted : ")
+# print(LogisticRegression.predict(x1))
