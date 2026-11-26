@@ -12,7 +12,9 @@ def eucudian_distance(x1 , x2):
                   keepdims=True)
 
 def manhattendistance(x1 , x2):
-    return abs(x1 - x2)
+    return np.sum(abs(x1 - x2) , axis = -1)
+
+
 
 class Knn:
     def __init__(self , k):
@@ -30,21 +32,27 @@ class Knn:
         """
         # first i will get the distance between the input and all data
         distances = manhattendistance(x , self.x)
+        # then get the k-indices that represent the minimum  of each distance
+        # print(distances)
+        k_nearest = np.argsort(distances)[:self.k]
+
+        return self.y[k_nearest]
         
         
+        
+# Testing
+# knn = Knn(3)
 
-knn = Knn()
+# x = np.random.randn(5,10)
 
-x = np.random.randn(5,10)
+# y = np.random.randint(0,10,(5,1))
 
-y = np.random.randint(0,10,(5,1))
-
-x1 = np.random.randn(1,10)
+# x1 = np.random.randn(1,10)
 
 
-knn.fit(x,y)
+# knn.fit(x,y)
 
-knn.predict(x1)
+# print(knn.predict(x1))
 
 
 
