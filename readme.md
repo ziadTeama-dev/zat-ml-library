@@ -4,6 +4,7 @@
 ## What i have implemented
 - `KNN`
 - `Linear Regression`
+- `Logistic Regression`
 
 ## Tech stack
 - **I have only to use :**
