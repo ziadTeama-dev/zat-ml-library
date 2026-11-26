@@ -3,6 +3,7 @@
 
 ## What i have implemented
 - `KNN`
+- `Linear Regression`
 
 ## Tech stack
 - **I have only to use :**
