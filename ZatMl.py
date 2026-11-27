@@ -27,14 +27,14 @@ def binary_crossentropy(y_predicted , y_target):
 class Metrices:
     def __init__(self,):
         # incase of needing to calculate f1 score
-        # i will made the values presaved
+        # i will made the values saved once calculated
         self.precesion_val = None
         self.recall_val = None
         self.f1_score_val = None
         self.accuracy_val = None
 
 
-    def accuracy(self , prediction:np.array , target:np.array ):
+    def accuracy(self , prediction:np.array , target:np.array ) -> float:
         """
         this function used to mesure the ac of the predicted label takes two argument\n
         prediction \n
@@ -47,7 +47,7 @@ class Metrices:
 
         return self.accuracy_val
 
-    def recall(self, prediction:np.array , target : np.array) -> np.array :
+    def recall(self, prediction:np.array , target : np.array) -> float :
         """
         This function used to mesure the the positive label out  all acual positive label \n
         "equation" : tp / tp + fn 
@@ -69,7 +69,7 @@ class Metrices:
         self.recall_val = tp / (tp + fn)
         return self.recall_val
 
-    def precesion(self, prediction:np.array , target : np.array) -> np.array :
+    def precesion(self, prediction:np.array , target : np.array) -> float :
         """
         This function used to mesure the model predicted positive label out  all predicted positive label \n
         "equation" : tp / tp + fp
@@ -85,7 +85,7 @@ class Metrices:
         self.precesion_val  = tp / (tp + fp) 
         return self.precesion_val
 
-    def f1_score(self, prediction:np.array , target : np.array) -> np.array :
+    def f1_score(self, prediction:np.array , target : np.array) -> float :
 
         # return the f1score incase it's precalculated
         if self.f1_score_val is not None:
@@ -100,9 +100,6 @@ class Metrices:
         self.f1_score_val = 2*((self.precesion_val * self.recall_val) / (self.precesion_val + self.recall_val))
         return self.f1_score_val
         
-
-           
-
 
 class Knn:
     def __init__(self , k):
