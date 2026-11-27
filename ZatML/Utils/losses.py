@@ -8,4 +8,4 @@ def MSRE(Y_predicted , Y_target):
 
 def binary_crossentropy(y_predicted , y_target):
     N , _ = y_predicted.shape
-    return -1/N * np.sum(y_target * np.log(y_predicted) + (1-y_target) * np.log(1-y_predicted))
+    return -1/N * np.sum(y_target * np.log1p(y_predicted) + (1-y_target) * np.log1p(1-y_predicted))
