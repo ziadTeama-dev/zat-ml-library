@@ -15,7 +15,7 @@ class LinearRegression:
         self.x = x
         self.y = y
         self.w = np.random.randn(D,1) * 1/D
-        self.b = 0
+        self.b = np.random.randn(1,) * 1/D
 
         for iter in range(1,self.num_iter+1):
             # 1 forward => output = x * self.w + b
