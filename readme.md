@@ -5,6 +5,8 @@
 - `KNN`
 - `Linear Regression`
 - `Logistic Regression`
+- `"Metrices"` : ``accuracy`` , ``precesion`` , ``recall``
+
 
 ## Tech stack
 - **I have only to use :**
